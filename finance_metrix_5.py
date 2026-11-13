@@ -21,8 +21,8 @@ df_orders_clean = df_orders_clean.merge(df_users[['user_id', 'experiment_group']
 df_events = df_events.merge(df_users[['user_id', 'experiment_group']], on='user_id', how='left')
 
 group_map = {
-    'standard': '1. Стандартный тариф (399 ₽)',
-    'promo_1rub': '2. Промо-акция (1 ₽)'
+    'standard': 'Стандартный тариф (399 ₽)',
+    'promo_1rub': 'Промо-акция (1 ₽)'
 }
 
 df_orders_clean['group'] = df_orders_clean['experiment_group'].map(group_map)
